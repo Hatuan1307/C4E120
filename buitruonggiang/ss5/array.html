@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        let studentName = ["Dũng", "Tuấn Anh", "Vũ", "Quân", "Quang", "Giang", "Linh", "Khang"];
+        console.log(studentName);
+
+        let heightOfstudents = ["1.70", "1.71", "1.72", "1.73", "1.74", "1.75", "1.76", "1.77"];
+        console.log(heightOfstudents);
+
+        console.log("lop minh co " + studentName.length + " ban");
+
+        console.log("ban dau tien ten la " + studentName[0] + " cao " + heightOfstudents[0] + "m");
+
+        console.log("ban cuoi cung ten la " + studentName[7] + " cao " + heightOfstudents[7] + "m");
+
+        console.log("minh ten la " + studentName[5] + " vi tri " + studentName.indexOf("Giang") + " cao " + heightOfstudents[5] +"m");
+        
+        for(let i = 0; i < studentName.length; i++){
+            console.log("ban " + studentName[i] + " cao " + heightOfstudents[i] + "m");
+        }
+
+
+
+    </script>
+</body>
+</html>
