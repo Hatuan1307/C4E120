@@ -26,8 +26,57 @@
             console.log("ban " + studentName[i] + " cao " + heightOfstudents[i] + "m");
         }
 
+        console.log("ban "  + (studentName.shift()) + " cao " + (heightOfstudents.shift()) + "m");
 
+        console.log("ban " + studentName.pop() + " cao " + heightOfstudents.pop() + "m");
 
+        let target = studentName[0]
+        console.log(target);
+        
+        
+
+        studentName.push("Hoài Phương");
+        heightOfstudents.push("1.65");
+        studentName.unshift("Hải Như");
+        heightOfstudents.unshift("1.67");
+        console.log(studentName);
+        console.log(heightOfstudents);
+
+        console.log(studentName.indexOf(target));
+        let indexTarget = studentName.indexOf(target)
+        
+
+        console.log(studentName.slice(1,7));
+
+        studentName.splice(indexTarget, 1);
+        console.log(studentName.splice(indexTarget, 1));
+        heightOfstudents.splice(indexTarget, 1);
+        console.log(heightOfstudents.splice(indexTarget, 1));
+
+        studentName.splice(3, 1, "GV Hạnh");
+        console.log(studentName);
+
+        studentName.indexOf("GV Hạnh")
+        console.log(studentName.indexOf("GV Hạnh"));
+        if( studentName.indexOf("GV Hạnh") >=0 && studentName.indexOf("GV Hạnh") <= (studentName.length-1)){
+            console.log("Giang vien dang o vi tri " + studentName.indexOf("GV Hạnh"));
+        } else {
+            console.log("Giang vien khong o trong lop");
+        }
+        
+        studentName.indexOf("TG Thành")
+        if( studentName.indexOf("TG Thành") >=0 && studentName.indexOf("TG Thành") <= (studentName.length-1)){
+            console.log("Tro giang dang o vi tri " + studentName.indexOf("TG Thành"));
+        } else {
+            console.log("Tro giang khong o trong lop");
+        }
+
+        let x = 0
+        for(let x = 0; x < studentName.length; x++){
+            studentName.splice(x, 1, "Đa tot nghiep")
+            console.log(studentName.splice(x, 1, "Đa tot nghiep"));
+        }
+        
     </script>
 </body>
 </html>
