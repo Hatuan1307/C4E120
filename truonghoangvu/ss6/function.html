@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP XEP MANG</title>
+</head>
+<body>
+    <script>
+        var Data;
+        let i=0;
+        const Array =[];
+        var temp=0;
+        console.log("[CHÚ Ý]");
+        console.log("Nhập từng phần tử của mảng bằng phím Enter");
+        console.log("Kết thúc nhập bằng phím e");
+        console.log("=========================================================");
+        while(Data != 'e'){
+            Data=prompt("Nhập phần tử của mảng là các số nguyên, số thực")
+            if (Data - Data !=0 && Data != 'e' ){
+                console.log("Hãy nhập lại phần tử mảng là các số nguyên hoặc các số thực")
+                break;
+            }
+            else if (Data != 'e') {
+                Array[i]=parseFloat(Data);
+                i++;
+            }
+        }
+        if ( Data == 'e'){
+            console.log("Mảng vừa nhập là:");
+            console.log(Array);
+            function bedenlon(arr){
+                for (let j =0; j < Array.length; j++){
+                    for (let k= j+1; k < Array.length ; k++){
+                        if (Array[j] > Array[k]){
+                            temp = Array[j];
+                            Array[j]=Array[k];
+                            Array[k]=temp;
+                            
+                        }
+                    }
+                }
+                console.log(Array);
+            }
+            function londenbe(arr){
+                for (let j =0; j < Array.length; j++){
+                    for (let k= j+1; k < Array.length ; k++){
+                        if (Array[j] < Array[k]){
+                            temp = Array[j];
+                            Array[j]=Array[k];
+                            Array[k]=temp;
+                            
+                        }
+                    }
+                }
+                console.log(Array);
+            }
+            console.log("Mảng sau khi sắp xếp từ bé đến lớn:");
+            bedenlon(Array);
+            console.log("Mảng sau khi sắp xếp từ lớn đến bé:");
+            londenbe(Array);
+        }
+    </script>
+</body>
+</html>
