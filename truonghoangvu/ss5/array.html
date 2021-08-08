@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANH SACH LOP</title>
+</head>
+<body>
+    <script>
+        const Names =[
+            'Nguyễn Tuấn Dũng',
+            'Trương Hoàng Vũ',
+            'Nguyễn Tuấn Anh',
+            'Hà Văn Tuấn',
+            'Phạm Tuấn Vũ',
+            'Nguyễn Anh Tú',
+            'Cao Thế Quân',
+            'Nguyễn Hồng Quang',
+        ];
+        const Heights =[
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+        ];
+        console.log("======= IN 2 MẢNG ==========")
+        for(let i=0; i< Names.length+Heights.length;i++){
+            if(i<Names.length)
+                console.log(Names[i]);
+            else 
+                console.log(Heights[i-Names.length]);
+        }
+        console.log("======= ======== ==========")
+        console.log("Lớp mình có "+Names.length+" bạn");
+        console.log("Bạn đầu tiên tên là "+ Names[0]+ " cao "+Heights[0]+" cm");
+        console.log("Bạn cuối cùng tên là "+ Names[7]+ " cao "+Heights[7]+" cm");
+        console.log("Mình tên là "+Names[1]+" ở vị trí "+Names.indexOf("Trương Hoàng Vũ")+" cao "+Heights[1]+" ở vị trí "+Heights.indexOf(172));
+        console.log("======= DANH SÁCH LỚP CÙNG CHIỀU CAO TƯƠNG ỨNG ==========")
+        for (let i=0; i< Names.length; i++){
+            console.log("Bạn "+ Names[i]+" cao "+Heights[i]+" cm");
+        }
+        console.log("======= XÓA BẠN ĐẦU TIÊN ==========")
+        Names.shift();
+        Heights.shift();
+        console.log("Nguyễn Tuấn Dũng");
+        console.log("======= XÓA BẠN CUỐI CÙNG ==========")
+        Names.pop();
+        Heights.pop();
+        console.log("Nguyễn Hồng Quang");
+        console.log("======= LƯU TÊN 2 BẠN ĐẦU TIÊN VÀ CUỐI CÙNG VÀO BIẾN TARGET ==========")
+        var target=Names[0];
+        console.log(target);
+        var target=Names[Names.length-1];
+        console.log(target);
+        console.log("======= THÊM 2 BẠN NỮ ==========")
+        Names.push("Lương Nguyễn Hải Như");
+        Heights.push(168);
+        Names.unshift("Trần Hoài Phương");
+        Heights.unshift(155);
+        console.log(Names);
+        console.log(Heights);
+        console.log("======= KIỂM TRA VỊ TRÍ CỦA HỌC VIÊN TARGET ==========")
+        var indexTarget = Names.indexOf(target);
+        console.log("Vị trí của học viên target: "+indexTarget +" tên là "+Names[indexTarget]);
+        console.log("======= IN RA TẤT CẢ HỌC VIÊN NAM ==========")
+        const men= Names.slice(1, 7);
+        console.log(men);
+        console.log("======= XÓA HỌC VIÊN TARGET ==========")
+        Names.splice(indexTarget, 1);
+        console.log(Names);
+        Heights.splice(indexTarget, 1);
+        console.log(Heights);
+        console.log("======= THAY TÊN BẢN THÂN BẰNG TÊN GIẢNG VIÊN ==========")
+        Names.splice(1, 1, "Nguyễn Đức Hạnh");
+        console.log(Names);
+        Heights.splice(1,1, 170);
+        console.log(Heights);
+        console.log("======= KIỂM TRA TRONG MẢNG CÓ TÊN GIẢNG VIÊN VÀ TÊN TRỢ GIẢNG KHÔNG ==========")
+        indexTarget = Names.indexOf("Nguyễn Đức Hạnh");
+        var indexTarget1 = Names.indexOf("Tống Quang Thành");
+        if(indexTarget > 0 ){
+            console.log("Giảng viên đang ở trong lớp tại vị trí "+ indexTarget);
+        }
+        else{
+            console.log("Giảng viên không ở trong lớp");
+        }
+        if (indexTarget1 > 0)
+            console.log("Trợ giảng đang ở trong lớp tại vị trí "+ indexTarget1);
+        else
+            console.log("Trợ giảng không ở trong lớp");
+        console.log("======= THÊM CỤM VÀO MỖI PHẦN TỬ MẢNG ==========")
+        for (let i=0; i<Names.length;i++){
+            Names[i] += "-đã tốt nghiệp";
+            console.log(Names[i]);
+        }
+        
+    </script>
+</body>
+</html>
