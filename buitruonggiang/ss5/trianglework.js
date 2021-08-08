@@ -11,6 +11,7 @@ for(let i = 0; i <= 6; i++){
     }
 }
 
+// có thể tham khảo bài bạn Trương Hoàng vũ để hiểu thêm về cách làm khi muốn in trên console nhé
 
 
 

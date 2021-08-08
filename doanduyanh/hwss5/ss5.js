@@ -90,3 +90,14 @@ for(let i = 0; i < arrayName.length; i++) {
     arrayName[i] = "đã tốt nghiệp";
 }
 console.log(arrayName);
+
+/*
+- Bài làm tốt, tuy nhiên thay tên tất cả học viên chứ không phải thay tất cả
+các phần tử, nên tên giảng viên vẫn cần được giữ lại
+- Thay vì dùng biến check có kiểu số, có thể dụng luôn kiểu boolean
+  if(arrayName[i] === "Hạnh") {
+    check = true
+
+  if (check)
+    consone.log()
+*/

@@ -98,7 +98,21 @@
             Names[i] += "-đã tốt nghiệp";
             console.log(Names[i]);
         }
-        
+                
+        /* 
+          - Không đặt tên biến với chữ cái đầu viết hoa (Names nên là names)
+          - Để truy cập phần tử cuối của mảng, dùng arr[arr.length - 1]
+          - Khi Names.shift()/pop() thì lưu vào biến và in luôn giá trị này ra chứ không
+            console.log text nữa nhé, luyện tập thêm để hiểu hơn về cách sử dụng 
+            hoặc các trường hợp có thể/không thể/nên/không nên sử dụng biến nhé
+          - Để in tên mình, bạn phải dùng for, so sánh xem tên mình với mỗi phần tử,
+            nếu trùng thì in ra
+          - Việc lưu indexTarget để bạn thay vào 
+            nameOfStudents.splice(indexTarget, 1, "Hạnh");
+          - Thay thế tên học viên, chứ không thay tất cả, nghĩa là tên
+            giảng viên phải giữ nguyên
+          - Nên comment yêu cầu/đề bài vào đầu mỗi khối code xử lý yêu cầu đó cho dễ hiểu, dễ theo dõi, dễ xử lý
+        */      
     </script>
 </body>
 </html>

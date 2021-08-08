@@ -51,3 +51,15 @@ if(nameOfStudents.indexOf("Thành") == -1){
 // thay thế tên tất cả các bn học viên bằng cụm từ đã tốt nghiệp
 nameOfStudents.splice(0, 5, "đã tốt nghiệp");
 console.log(nameOfStudents)
+
+/* 
+  - Nên comment yêu cầu/đề bài vào đầu mỗi khối code xử lý yêu cầu đó cho dễ hiểu, dễ theo dõi, dễ xử lý
+  - Để truy cập phần tử cuối của mảng, dùng arr[arr.length - 1]
+  - Để in tên mình, bạn phải dùng for, so sánh xem tên mình với mỗi phần tử
+    nếu trùng thì in ra
+  - Việc lưu indexTarget để bạn thay vào 
+    nameOfStudents.splice(indexTarget, 1, "Hạnh"); luyện tập thêm để hiểu hơn về cách
+    sử dụng hoặc các trường hợp có thể/không thể/nên/không nên sử dụng biến nhé
+  - Thay thế tên học viên, chứ không thay tất cả, nghĩa là tên
+    giảng viên phải giữ nguyên
+*/

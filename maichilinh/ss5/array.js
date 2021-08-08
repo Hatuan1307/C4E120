@@ -55,3 +55,13 @@ console.log("Danh sách học viên đã tốt nghiệp");
 for(let index = 0; index < arrName.length; index++){
     console.log("Bạn "+arrName[index] +"   Cao: "+ arrHeight[index] +" -Đã tốt nghiệp");  
 } 
+
+/* 
+  - Xem lại dòng 7 nhé
+  - Mình cần bạn check tên giảng viên như check tên của bản thân,
+  nên in thẳng ra là nhanh quá nhé :D
+  - Các bạn học viên đã tốt nghiệp, chứ giảng viên thì không, 
+  cái này tương tự như khi in tên bản thân ra thôi nhé
+  - Nên comment yêu cầu/đề bài vào đầu mỗi khối code xử lý yêu cầu đó cho dễ hiểu,
+  dễ theo dõi, dễ xử lý        
+*/
