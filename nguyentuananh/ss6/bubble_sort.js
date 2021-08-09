@@ -12,3 +12,5 @@ function bubbleSort(array) {
     var arr = [-1, 15, -19, 50, 69, 2];
     bubbleSort(arr);
     console.log(arr);
+
+// ý kiến trợ giảng: bài làm OK

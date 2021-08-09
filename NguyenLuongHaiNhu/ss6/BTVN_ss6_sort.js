@@ -24,7 +24,11 @@ arr.sort(function (x, y) {
 });
 console.log(arr);
 
-
+/* 
+  Ý kiến trợ giảng:
+  Chị không cần gán dòng 3, 4, các biến x,y trong hàm sort()
+  là được tự gán lần lượt bằng các phần tử trong mảng chứ không phải là các giá trị nhận ở bên trên
+*/
 
 
 
