@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        let studentName = ["Dũng", "Tuấn Anh", "Vũ", "Quân", "Quang", "Giang", "Linh", "Khang"];
+        console.log(studentName);
+
+        let heightOfstudents = ["1.70", "1.71", "1.72", "1.73", "1.74", "1.75", "1.76", "1.77"];
+        console.log(heightOfstudents);
+
+        console.log("lop minh co " + studentName.length + " ban");
+
+        console.log("ban dau tien ten la " + studentName[0] + " cao " + heightOfstudents[0] + "m");
+
+        console.log("ban cuoi cung ten la " + studentName[7] + " cao " + heightOfstudents[7] + "m");
+
+        console.log("minh ten la " + studentName[5] + " vi tri " + studentName.indexOf("Giang") + " cao " + heightOfstudents[5] +"m");
+        
+        for(let i = 0; i < studentName.length; i++){
+            console.log("ban " + studentName[i] + " cao " + heightOfstudents[i] + "m");
+        }
+
+        console.log("ban "  + (studentName.shift()) + " cao " + (heightOfstudents.shift()) + "m");
+
+        console.log("ban " + studentName.pop() + " cao " + heightOfstudents.pop() + "m");
+
+        let target = studentName[0]
+        console.log(target);
+        
+        
+
+        studentName.push("Hoài Phương");
+        heightOfstudents.push("1.65");
+        studentName.unshift("Hải Như");
+        heightOfstudents.unshift("1.67");
+        console.log(studentName);
+        console.log(heightOfstudents);
+
+        console.log(studentName.indexOf(target));
+        let indexTarget = studentName.indexOf(target)
+        
+
+        console.log(studentName.slice(1,7));
+
+        studentName.splice(indexTarget, 1);
+        console.log(studentName.splice(indexTarget, 1));
+        heightOfstudents.splice(indexTarget, 1);
+        console.log(heightOfstudents.splice(indexTarget, 1));
+
+        studentName.splice(3, 1, "GV Hạnh");
+        console.log(studentName);
+
+        studentName.indexOf("GV Hạnh")
+        console.log(studentName.indexOf("GV Hạnh"));
+        if( studentName.indexOf("GV Hạnh") >=0 && studentName.indexOf("GV Hạnh") <= (studentName.length-1)){
+            console.log("Giang vien dang o vi tri " + studentName.indexOf("GV Hạnh"));
+        } else {
+            console.log("Giang vien khong o trong lop");
+        }
+        
+        studentName.indexOf("TG Thành")
+        if( studentName.indexOf("TG Thành") >=0 && studentName.indexOf("TG Thành") <= (studentName.length-1)){
+            console.log("Tro giang dang o vi tri " + studentName.indexOf("TG Thành"));
+        } else {
+            console.log("Tro giang khong o trong lop");
+        }
+
+        let x = 0
+        for(let x = 0; x < studentName.length; x++){
+            studentName.splice(x, 1, "Đa tot nghiep")
+            console.log(studentName.splice(x, 1, "Đa tot nghiep"));
+        }
+        
+
+        /* 
+          Góp ý từ trợ giảng:
+          - Với kiểu dữ liệu chiều cao, có thế dùng number, k nhất thiết sử dụng string
+          - Để in ra phần tử cuối cùng của mảng, sử dụng arr[arr.length - 1] 
+            vì trong thực tế độ dài mảng nhận được là có thể thay đổi/chưa
+            chắc đã biết trước về độ dài mảng sẽ nhận được là bao nhiêu
+          - Mình có yêu cầu ra thay tên bạn bằng tên GV nghĩa là mình cho bạn 1 
+            cái key (là tên của bạn), thực chất với yêu cầu này tức là bạn sẽ phải seach
+            trong mảng, nếu có tên bạn thì thay thế, k thì thôi
+          - Nên comment yêu cầu/đề bài vào đầu mỗi khối code xử lý yêu cầu đó cho dễ hiểu, dễ theo dõi, dễ xử lý
+          - Bạn nắm được khái quát về array và thao tác array, nhưng chú ý hơn 
+          về cách dùng hàm splice nhé
+
+        */
+    </script>
+</body>
+</html>
